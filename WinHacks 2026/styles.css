@@ -1,0 +1,87 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full height */
+html, body {
+    height: 100%;
+}
+
+/* Page layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("stockmarket_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+header {
+    background: #005EB8;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* Header content */
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Main centers content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    padding: 1rem;
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type="search"] {
+    padding: 0.75rem 1rem;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+button {
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    background-color: #005EB8;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
