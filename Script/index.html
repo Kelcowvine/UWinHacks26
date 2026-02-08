@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display JSON</title>
+</head>
+<body>
+<h1>JSON Data</h1>
+<ul id="list"></ul>
+
+<script>
+  fetch("/data")
+          .then(res => res.json())
+          .then(values => {
+            const ul = document.getElementById("list");
+
+            // Assuming values is an array of numbers or objects
+            values.forEach(v => {
+              const li = document.createElement("li");
+              li.textContent = JSON.stringify(v); // convert object to string if needed
+              ul.appendChild(li);
+            });
+          })
+          .catch(err => console.error(err));
+</script>
+</body>
+</html>
