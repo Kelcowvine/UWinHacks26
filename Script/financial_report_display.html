@@ -74,25 +74,25 @@
                 if (!response.ok) throw new Error("Company data not found");
                 const data = await response.json();
 
-                // Update the results section
-                document.getElementById("company-name").textContent = company.toUpperCase();
-                document.getElementById("current-assets").textContent = data.currentAssets || "N/A";
-                document.getElementById("current-liabilities").textContent = data.currentLiabilities || "N/A";
-                document.getElementById("inventory").textContent = data.inventory || "N/A";
-                document.getElementById("total-liabilities").textContent = data.totalLiabilities || "N/A";
-                document.getElementById("equity").textContent = data.equity || "N/A";
-                document.getElementById("total-assets").textContent = data.totalAssets || "N/A";
-
-                // Make results visible
+                // Replace previous JSON with the new one
                 const resultsSection = document.getElementById("results");
+                resultsSection.innerHTML = `
+            <h3>${company.toUpperCase()}</h3>
+            <pre>${JSON.stringify(data, null, 2)}</pre>
+        `;
                 resultsSection.classList.remove("hidden");
 
             } catch (error) {
                 console.error("Error fetching company data:", error);
                 alert("Could not fetch company data. Make sure you typed a supported ticker.");
             }
+
+            // Clear the search input
+            searchInput.value = "";
         });
     </script>
+
+
 
 </body>
 </html>

@@ -20,8 +20,8 @@ http.createServer((req, res) => {
         res.end(jsonData);
 
     }
-    else if (req.url === "/data/aapl") {
-        const jsonPath = path.join(__dirname, "..", "jsonData", "AAPL.json");
+    else if (req.url === "/data/appl") {
+        const jsonPath = path.join(__dirname, "..", "jsonData", "APPL.json");
         const jsonData = fs.readFileSync(jsonPath, "utf8");
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(jsonData);
