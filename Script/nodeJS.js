@@ -15,7 +15,7 @@ for (const item of data) {
     if (second == null){
         console.log(firstNum)
         continue;
-    }
+    } 
     console.log(`\t${firstNum}, ${second}`)
 
 }
