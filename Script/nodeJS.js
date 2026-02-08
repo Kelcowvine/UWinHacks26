@@ -1,5 +1,7 @@
+const fsModule = require("fs")
+
 console.log("Node is running");
-const data = require("../jsonData/APPL.json");
+const file = fsModule.readFile("../jsonData/APPL.json");
 
 //Parse JSON into a JS object/array
 const data = JSON.parse(text);
