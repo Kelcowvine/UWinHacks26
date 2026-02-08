@@ -9,16 +9,25 @@ const data = JSON.parse(text);
 
 
 
+
 for (const item of data) {
     const values = Object.values(item);
     const firstNum = values[0];
     const second = values[1];
 
     if (second == null){
-        console.log(firstNum)
+        console.og(firstNum)
         continue;
     }
     console.log(`\t${firstNum}, ${second}`)
 
 }
+//write this to the html file
 
+
+// ExpressJS
+route.get('/', async (req, res) => {
+    // logic
+
+    res.sendFile(path.join(__dirname), '')
+})
