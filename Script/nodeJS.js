@@ -1,4 +1,4 @@
-const fsModule = require("fs")
+const fs = require("fs")
 
 console.log("Node is running");
 // 1️⃣ Read the file as text
