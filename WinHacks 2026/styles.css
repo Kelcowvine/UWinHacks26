@@ -8,6 +8,7 @@
 /* Full height */
 html, body {
     height: 100%;
+    margin: 0;
 }
 
 /* Page layout */
@@ -46,12 +47,19 @@ h1 {
     font-size: 24px;
 }
 
+p {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    background-color: #005EB8;
+}
+
 /* Main centers content */
 main {
     flex: 1;
     display: flex;
     justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
+    align-items: flex-start;
     padding: 1rem;
 }
 
@@ -59,6 +67,8 @@ main {
 .search-bar {
     display: flex;
     gap: 0.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 input[type="search"] {
@@ -78,10 +88,11 @@ button {
     color: white;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+.bottom-right-img {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 150px; /* adjust as needed */
+    height: auto;
+    z-index: 1000;
 }
