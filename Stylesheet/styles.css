@@ -54,7 +54,7 @@ main {
 }
 
 .hero-text {
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 32px;
     background-color: #005EB8;
@@ -134,41 +134,4 @@ button {
         font-size: 14px
         
     }
-}
-
-.help-article {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    line-height: 1.6;
-}
-
-.help-article h1 {
-    color: black;
-    margin-bottom: 1rem;
-}
-
-.help-article article {
-    margin-bottom: 2rem;
-}
-
-.back-link {
-    display: inline-block;
-    margin-top: 2rem;
-    text-decoration: none;
-    color: rgba(255, 255, 255);
-}
-
-.text-box {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 1.5rem;
-}
-
-/* Optional: improve readability */
-.text-box p {
-    margin-bottom: 1rem;
 }
